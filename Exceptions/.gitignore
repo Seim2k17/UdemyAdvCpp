@@ -25,6 +25,7 @@ Exceptions.VC.VC.opendb
 *.la
 *.a
 *.lib
+*.ilk
 
 # Executables
 *.exe
@@ -38,6 +39,9 @@ Exceptions.VC.VC.opendb
 *.suo
 *.opensdf
 *.sdf
+
+#Build, Debug Dir
+Debug/*
 
 # Unreal Stuff
 # Precompiled Assets

@@ -3,3 +3,10 @@
 ################################################################################
 
 /Exceptions/Debug/Files.ilk
+/Exceptions/Debug/Files.pdb
+/Exceptions/Exceptions/Debug/*.*
+/Exceptions/Exceptions/CatchingOrder.cpp
+/Exceptions/Files/Files/Debug/*.*
+/Exceptions/Files/Files/Files.vcxproj
+/Exceptions/Files/Files/Files.vcxproj.filters
+/Exceptions/Files/Files/Files.vcxproj.user

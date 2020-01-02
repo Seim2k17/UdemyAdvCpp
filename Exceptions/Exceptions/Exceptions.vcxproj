@@ -116,7 +116,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Basic.cpp" />
+    <ClCompile Include="CatchingOrder.cpp" />
+    <ClCompile Include="CustomException.cpp" />
+    <ClCompile Include="Exceptions4.cpp" />
     <ClCompile Include="ExceptionTest2.cpp" />
+    <ClCompile Include="ExceptionTest3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

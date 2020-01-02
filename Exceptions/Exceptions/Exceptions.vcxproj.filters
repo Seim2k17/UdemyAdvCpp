@@ -21,5 +21,17 @@
     <ClCompile Include="ExceptionTest2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ExceptionTest3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchingOrder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

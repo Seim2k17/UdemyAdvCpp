@@ -33,6 +33,7 @@ void ExceptionThrowing()
     }
 }
 
+/*
 int main()
 {
     try
@@ -62,3 +63,4 @@ int main()
 
     return 0;
 }
+*/
