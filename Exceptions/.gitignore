@@ -29,6 +29,10 @@ Exceptions.VC.VC.opendb
 *.a
 *.lib
 *.ilk
+*.tlog
+*.log
+*.idb
+*.pdb
 
 # Executables
 *.exe
@@ -45,6 +49,7 @@ Exceptions.VC.VC.opendb
 
 #Build, Debug Dir
 Debug/*
+x64/*
 
 # Unreal Stuff
 # Precompiled Assets
