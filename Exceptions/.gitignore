@@ -1,6 +1,9 @@
 *.VC.db
 Exceptions.VC.VC.opendb
 .vs/
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
 
 # Compiled Object files
 *.slo
