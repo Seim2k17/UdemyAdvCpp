@@ -4,6 +4,7 @@
 
 using namespace std;
 
+/*
 int main()
 {
     multimap<int, string> lookup;
@@ -53,3 +54,4 @@ int main()
 
     return 0;
 }
+*/
