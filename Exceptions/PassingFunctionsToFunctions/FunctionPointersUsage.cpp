@@ -14,6 +14,7 @@ int countStrings(vector<string>& texts, bool (*testMatch)(string toTest))
 	return count_if(texts.begin(), texts.end(), testMatch);
 }
 
+/*
 int main()
 {
     vector<string> texts;
@@ -38,3 +39,4 @@ int main()
     cin >> bla;
     return 0;
 }
+*/
