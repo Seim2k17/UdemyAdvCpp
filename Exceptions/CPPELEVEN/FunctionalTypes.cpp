@@ -32,6 +32,7 @@ int multiplier(const int& a, const int& b)
     return a * b;
 }
 
+/*
 int main()
 {
     vector<string> vec{"one", "two", "three", "five", "seven"};
@@ -100,3 +101,4 @@ int main()
     cin >> bla;
     return 0;
 }
+*/
