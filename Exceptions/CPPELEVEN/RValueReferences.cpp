@@ -42,6 +42,8 @@ public:
 
     Test(const Test& other)
     {
+		 _pBuffer = new int[SIZE]{};
+
         cout << "Copy-C'tor" << endl;
 
         memcpy(_pBuffer, other._pBuffer, SIZE * sizeof(int));
@@ -63,12 +65,12 @@ public:
     friend ostream& operator<<(ostream& out, const ofstream& test);
 };
 
-ostream& operator<<(ostream& out, const Test& test)
-{
-    out << "Hello from test: ";
-	//out << test._text;
-	return out;
-}
+// ostream& operator<<(ostream& out, const Test& test)
+// {
+//     out << "Hello from test: ";
+// 	//out << test._text;
+// 	return out;
+// }
 
 Test getTest5()
 {
@@ -85,6 +87,7 @@ void check(Test&& value)
 	cout << "rValue function!" << endl;
 }
 
+/*
 int main()
 {
     Test test2 = getTest5();
@@ -110,3 +113,4 @@ int main()
     cin >> bla;
     return 0;
 }
+*/
