@@ -25,7 +25,7 @@ class Sister : public Parent
 {
 };
 
-
+/*
 int main()
 {
     {
@@ -64,4 +64,5 @@ int main()
     char blah;
     cin >> blah;
 }
+*/
 
