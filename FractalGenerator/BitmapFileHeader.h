@@ -9,7 +9,7 @@ using namespace std;
 
 namespace fractalCreator
 {
-    // Information about the bitmap-file we´ll write
+    // Information about the bitmap-file weÂ´ll write
     struct BitmapFileHeader
     {
         // for BitmapFiles it will start with "BM"
@@ -20,3 +20,5 @@ namespace fractalCreator
         int32_t dataOffset;
     };
 } // namespace fractalCreator
+
+#pragma pack()

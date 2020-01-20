@@ -4,11 +4,11 @@
 using namespace std;
 using namespace fractalCreator;
 
-int main(int argc, char **argv)
+int main()
 {
-	
+	cout << "started writing" << endl;
 	Bitmap bmp(500,500);
-	bmp.write("image.bmp");
+	bmp.write("image3.bmp");
 	
 	
 	cout << "finished" << endl;

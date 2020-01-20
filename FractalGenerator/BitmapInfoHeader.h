@@ -24,3 +24,5 @@ namespace fractalCreator
         int32_t importantColors{0};
     };
 } // namespace fractalCreator
+
+#pragma pack()

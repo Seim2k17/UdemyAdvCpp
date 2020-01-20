@@ -26,12 +26,19 @@ void fractalCreator::Bitmap::setPixel(int posX, int posY, uint8_t red, uint8_t g
 	uint8_t* pPixel = m_pPixels.get();
 
 	// and move to the needed position
-	pPixel += posY * m_width + posX;
+	pPixel += (posY *3 * m_width) + posX;
+	
+	pPixel[0] = blue;
+	pPixel[1] = green;
+	pPixel[2] = red;
 
 }
 
 bool fractalCreator::Bitmap::write(string fileName)
 {
+	
+	
+	
     BitmapFileHeader fileHeader;
     BitmapInfoHeader infoHeader;
 
@@ -41,13 +48,18 @@ bool fractalCreator::Bitmap::write(string fileName)
 
     infoHeader.bitmapWidth = m_width;
     infoHeader.bitmapHeight = m_height;
+	
+	
 
     ofstream file;
+	
     file.open(fileName, ios::out | ios::binary);
+
 
     // if st. like no writing rights
     if (!file)
     {
+		cout << "Hm. An Etrror happen." << endl;
         return false;
     }
 
@@ -55,16 +67,23 @@ bool fractalCreator::Bitmap::write(string fileName)
     file.write((char*)&fileHeader, sizeof(fileHeader));
     file.write((char*)&infoHeader, sizeof(infoHeader));
 
-	/*
-    for (auto el : m_pPixels)
-    {
-    }
-	*/
+	for(int ix =0;ix<m_width;ix++)
+	{
+		for(int iy=0;iy <m_height;iy++)
+		{
+			setPixel(ix,iy,23+5*ix,261+10*iy,112+4*ix+5*iy);
+		}
+			
+	}
+	
+
 
     // for the raw imagedata we need a raw pointer and enough space (imageSizeX*Y*RGB)
     file.write((char*)m_pPixels.get(), m_width * m_height * 3);
 
     file.close();
+	
+	cout << "Hm. Start writing." << endl;
 
     // if closing the file went bad
     if (!file)

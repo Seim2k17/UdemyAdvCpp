@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=FractalGenerator
 ConfigurationName      :=Debug
-WorkspacePath          :=/home/simon/Learning/CodeLite/Ryool
-ProjectPath            :=/home/simon/Learning/CodeLite/Ryool/UdemyAdvCpp/FractalGenerator
+WorkspacePath          :=/home/simon/Learning/C++/CodeLite/Ryool
+ProjectPath            :=/home/simon/Learning/C++/CodeLite/Ryool/UdemyAdvCpp/FractalGenerator
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=simon
-Date                   :=18/01/20
+Date                   :=19/01/20
 CodeLitePath           :=/home/simon/.codelite
 LinkerName             :=/usr/bin/g++
 SharedObjectLinkerName :=/usr/bin/g++ -shared -fPIC
@@ -92,7 +92,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/simon/Learning/CodeLite/Ryool/UdemyAdvCpp/FractalGenerator/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/simon/Learning/C++/CodeLite/Ryool/UdemyAdvCpp/FractalGenerator/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 
@@ -100,7 +100,7 @@ $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
 $(IntermediateDirectory)/Bitmap.cpp$(ObjectSuffix): Bitmap.cpp $(IntermediateDirectory)/Bitmap.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/simon/Learning/CodeLite/Ryool/UdemyAdvCpp/FractalGenerator/Bitmap.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Bitmap.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/simon/Learning/C++/CodeLite/Ryool/UdemyAdvCpp/FractalGenerator/Bitmap.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Bitmap.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Bitmap.cpp$(DependSuffix): Bitmap.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Bitmap.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Bitmap.cpp$(DependSuffix) -MM Bitmap.cpp
 
