@@ -14,3 +14,11 @@
 /FractalImages/FractalImages/Debug/FractalImages.tlog
 /FractalImages/FractalImages/Debug
 /FractalImages/.vs/FractalImages/v15
+*.opendb
+*.db
+*.suo
+*.vcxproj
+*.filters
+*.user
+/FractalGenerator/Debug/FractalGenerator.tlog
+/FractalGenerator/Debug

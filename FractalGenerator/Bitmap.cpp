@@ -25,9 +25,10 @@ void fractalCreator::Bitmap::setPixel(int posX, int posY, uint8_t red, uint8_t g
 	// point at the start of the allocated Pixel-Mem
 	uint8_t* pPixel = m_pPixels.get();
 
-	// and move to the needed position
-	pPixel += (posY *3 * m_width) + posX;
+	// and move to the needed position (note the * 3 ! --> RGB for ONE Pixel (3bytes)
+	pPixel += (posY *3 * m_width) + (posX*3);
 	
+	// BMP is a little EndianFormat Type
 	pPixel[0] = blue;
 	pPixel[1] = green;
 	pPixel[2] = red;
@@ -67,6 +68,7 @@ bool fractalCreator::Bitmap::write(string fileName)
     file.write((char*)&fileHeader, sizeof(fileHeader));
     file.write((char*)&infoHeader, sizeof(infoHeader));
 
+	/* just for Testing / we set the Pixel outside of write for Readability 
 	for(int ix =0;ix<m_width;ix++)
 	{
 		for(int iy=0;iy <m_height;iy++)
@@ -75,7 +77,7 @@ bool fractalCreator::Bitmap::write(string fileName)
 		}
 			
 	}
-	
+	*/
 
 
     // for the raw imagedata we need a raw pointer and enough space (imageSizeX*Y*RGB)
