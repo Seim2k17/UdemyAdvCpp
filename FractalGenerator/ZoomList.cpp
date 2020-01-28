@@ -10,6 +10,8 @@ fractalCreator::ZoomList::ZoomList(int width, int height)
 void fractalCreator::ZoomList::add(const Zoom& zoom)
 {
     zooms.push_back(zoom);
+
+	m_xCenter += ()
 }
 
 std::pair<double, double> fractalCreator::ZoomList::doZoom(int x, int y)

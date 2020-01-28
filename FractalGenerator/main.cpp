@@ -4,6 +4,7 @@
 #include <iostream>
 #include <math.h>
 #include <memory>
+#include "ZoomList.h"
 
 using namespace std;
 using namespace fractalCreator;
