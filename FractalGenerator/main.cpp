@@ -1,10 +1,10 @@
 #include "Bitmap.h"
 #include "Mandelbrot.h"
+#include "ZoomList.h"
 #include <cstdint>
 #include <iostream>
 #include <math.h>
 #include <memory>
-#include "ZoomList.h"
 
 using namespace std;
 using namespace fractalCreator;
@@ -36,6 +36,10 @@ int main()
     double min = 999999;
     double max = -999999;
 
+    ZoomList zoomList(WIDTH, HEIGTH);
+    zoomList.add(Zoom(WIDTH / 2, HEIGTH / 2, 1.0/WIDTH));
+	zoomList.add(Zoom(680, 212, 2.0/WIDTH));
+
     // store how many pixels need which iteration.
     // and be sure to initialize the array with 0 ( {} )
     //unique_ptr<int[]> histogram(new int[Mandelbrot::MAX_ITERATIONS + 1]{});
@@ -59,14 +63,17 @@ int main()
             //double xFractal = (x - WIDTH / 2 - 200) * (2.0 / WIDTH); // from -1 to +1 it´s 2 ...
             //double yFractal = (y - HEIGTH / 2) * (2.0 / HEIGTH);
 
-            double xFractal = (x - WIDTH / 2 - 200) * (2.0 / HEIGTH);
-            double yFractal = (y - HEIGTH / 2) * (2.0 / HEIGTH);
+			// dummyImplementation:
+            // double xFractal = (x - WIDTH / 2 - 200) * (2.0 / HEIGTH);
+            // double yFractal = (y - HEIGTH / 2) * (2.0 / HEIGTH);
+
+			pair<double, double> coords = zoomList.doZoom(x, y);
 
             // to get a range from [-1,+1]
 
             // now we encapsulate the drawing code and here we only build the histogram
             // here we get a number of iterations for every pixel
-            int iterations = Mandelbrot::getIteration(xFractal, yFractal);
+            int iterations = Mandelbrot::getIteration(coords.first, coords.second);
 
             // calculate the index of the pixel
             fractal[y * WIDTH + x] = iterations;
