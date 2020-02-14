@@ -24,11 +24,11 @@ void printArray(const unique_ptr<int[]>& Array)
 int main()
 {
     // uff 4k =
-    //int const WIDTH = 4 * 1920;
-    //int const HEIGTH = 4 * 1080;
+    int const WIDTH = 4 * 1920;
+    int const HEIGTH = 4 * 1080;
 
-    int const WIDTH = 800;
-    int const HEIGTH = 600;
+    //int const WIDTH = 800;
+    //int const HEIGTH = 600;
 
     cout << "started writing" << endl;
     Bitmap bmp(WIDTH, HEIGTH);
@@ -38,7 +38,8 @@ int main()
 
     ZoomList zoomList(WIDTH, HEIGTH);
     zoomList.add(Zoom(WIDTH / 2, HEIGTH / 2, 1.0/WIDTH));
-	zoomList.add(Zoom(680, 212, 2.0/WIDTH));
+	zoomList.add(Zoom(750, HEIGTH-25, 0.1));
+	zoomList.add(Zoom(403, HEIGTH-314, 0.005));
 
     // store how many pixels need which iteration.
     // and be sure to initialize the array with 0 ( {} )
