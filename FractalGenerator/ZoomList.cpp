@@ -10,6 +10,10 @@ fractalCreator::ZoomList::ZoomList(int width, int height)
 {
 }
 
+fractalCreator::ZoomList::ZoomList()
+{
+}
+
 void fractalCreator::ZoomList::add(const Zoom& zoom)
 {
     zooms.push_back(zoom);
@@ -25,8 +29,8 @@ void fractalCreator::ZoomList::add(const Zoom& zoom)
 
 std::pair<double, double> fractalCreator::ZoomList::doZoom(int x, int y)
 {
-	// ZoomAlgorithm
-	double xFractal = (x - m_width / 2)*m_scale + m_xCenter;
-	double yFractal = (y - m_height / 2)*m_scale + m_yCenter;
+    // ZoomAlgorithm
+    double xFractal = (x - m_width / 2) * m_scale + m_xCenter;
+    double yFractal = (y - m_height / 2) * m_scale + m_yCenter;
     return pair<double, double>(xFractal, yFractal);
 }

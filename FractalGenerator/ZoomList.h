@@ -21,6 +21,7 @@ namespace fractalCreator
         vector<Zoom> zooms;
 
     public:
+		ZoomList();
         ZoomList(int width, int height);
         void add(const Zoom& zoom);
         //included in utility
