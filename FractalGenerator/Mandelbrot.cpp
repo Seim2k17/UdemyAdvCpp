@@ -29,9 +29,9 @@ int fractalCreator::Mandelbrot::getIteration(double x, double y)
 		z = z * z + c;
 
 		// magnitude of a complex number
-		//if (abs(z) > 2)
+		if (abs(z) > 2)
 		// quick optimization
-		if (norm(z) > 4)
+		//if (norm(z) > 4)
 		{
 			break;
 		}

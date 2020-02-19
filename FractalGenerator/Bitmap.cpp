@@ -11,7 +11,7 @@ using namespace std;
 fractalCreator::Bitmap::Bitmap(int width, int height)
     : m_width(width)
     , m_height(height)
-    , m_pPixels(new uint8_t[width * height * 3]{0}) // allocate widhtxheightxRGB bytes
+    , m_pPixels(new uint8_t[width * height * 3]{}) // allocate widhtxheightxRGB bytes
 
 {
 }
@@ -30,7 +30,7 @@ void fractalCreator::Bitmap::setPixel(int posX, int posY, uint8_t red, uint8_t g
     uint8_t* pPixel = m_pPixels.get();
 
     // and move to the needed position (note the * 3 ! --> RGB for ONE Pixel (3bytes)
-    pPixel += (posY * 3 * m_width) + (posX * 3);
+    pPixel += (posY * 3) * m_width + (posX * 3);
 
     // BMP is a little EndianFormat Type
     pPixel[0] = blue;

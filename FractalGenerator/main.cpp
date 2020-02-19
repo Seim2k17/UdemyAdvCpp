@@ -40,20 +40,12 @@ int main()
 
     cout << rgb3.r << "," << rgb3.g << "," << rgb3.b << endl;
 
-    FractalCreator FractalGen(800, 600);
+    FractalCreator FractalGen(8, 6);
 
-    int height = 600;
+    FractalGen.run("fractalImage.bmp");
 
-    FractalGen.addZoom(Zoom(750, height - 25, 0.1));
-    FractalGen.addZoom(Zoom(403, height - 314, 0.005));
-
-    FractalGen.calculateTotaliterations();
-
-    FractalGen.calculateIteration();
-
-    FractalGen.drawFractal();
-
-    FractalGen.writeBitmap("fractalFinal.bmp");
+	char bla;
+	cin >> bla;
 
     return 0;
 }

@@ -13,7 +13,7 @@ namespace fractalCreator
         int m_width{0};
         int m_height{0};
 
-        unique_ptr<uint8_t[]> m_pPixels{0}; // {nullptr};
+        unique_ptr<uint8_t[]> m_pPixels{nullptr}; // {nullptr};
 
     public:
         Bitmap();

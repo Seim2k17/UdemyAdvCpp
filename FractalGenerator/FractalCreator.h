@@ -17,9 +17,12 @@ namespace fractalCreator
     class FractalCreator
     {
     public:
+        void run(string name);
+
         FractalCreator(int width, int height);
         virtual ~FractalCreator();
 
+    private:
         void calculateIteration();
         void calculateTotaliterations();
         void drawFractal();
